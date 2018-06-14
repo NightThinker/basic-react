@@ -18,7 +18,8 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
-      },{
+      },
+      {
         test: /\.css$/,
         exclude: /node_modules/,
         use: [
@@ -46,6 +47,10 @@ module.exports = {
             }
           } 
         ]
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/,
+        loader: 'url-loader?limit=8000&name=images/[name].[ext]'
       }
     ]
   }
